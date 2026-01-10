@@ -1,0 +1,102 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.loader-box {
+  background: #111;
+  border-radius: 8px;
+  width: 420px;
+  max-width: 90%;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+  font-family: monospace;
+  color: #0f0;
+  overflow: hidden;
+}
+
+.loader-header {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: #222;
+  border-bottom: 1px solid #333;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.dot.red {
+  background: #ff5f56;
+}
+.dot.yellow {
+  background: #ffbd2e;
+}
+.dot.green {
+  background: #27c93f;
+}
+
+.loader-content {
+  padding: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  color: #0af;
+}
+
+.text {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.cursor {
+  margin-left: 5px;
+  color: #0f0;
+  animation: blink 1s steps(1, start) infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+.terminal-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.action-link {
+  color: #00ff88;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: monospace;
+  transition: color 0.2s ease;
+}
+
+.action-link:hover {
+  color: #00ffaa;
+}
+
+.divider {
+  color: #666;
+  font-family: monospace;
+}
