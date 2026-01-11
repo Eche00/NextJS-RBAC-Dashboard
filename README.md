@@ -265,3 +265,94 @@ You can easily customize:
 - UI components
 
 The structure is intentionally flexible.
+
+---
+
+# Keeping the Stack Always Up to Date
+
+This boilerplate is designed to remain modern and maintainable over time.  
+To achieve this, developers are expected to **regularly upgrade Next.js, React, and all core dependencies**.
+
+Staying current prevents security risks, reduces technical debt, and ensures long-term scalability.
+
+---
+
+## Upgrade Philosophy
+
+The project follows these principles:
+
+- Stay close to the latest stable releases
+- Avoid deprecated APIs early
+- Upgrade frequently in small steps
+- Treat upgrades as routine maintenance
+
+Regular updates are easier and safer than large, infrequent upgrades.
+
+---
+
+## Upgrading Next.js
+
+Next.js evolves rapidly, especially around the App Router and routing conventions.
+
+### Recommended Practice
+
+- Upgrade to the latest stable version as soon as possible
+- Avoid locking to old versions unless absolutely necessary
+- Always review the official release notes
+
+Upgrade command:
+```bash
+npm install next@latest
+```
+After upgrading:
+
+- Run the development server
+
+- Verify layouts and route groups still behave correctly
+
+- Check for warnings related to routing, metadata, or rendering
+
+This boilerplate is structured to align closely with Next.js best practices, minimizing breaking changes.
+
+## Upgrading React
+
+React upgrades are generally safe when performed regularly.
+
+Upgrade command:
+```bash
+npm install react@latest react-dom@latest
+```
+After upgrading:
+
+- Verify AuthContext behavior
+
+- Confirm layouts render correctly
+
+- Watch for strict mode or deprecation warnings
+
+- The project avoids legacy React patterns, making upgrades smoother.
+
+
+
+### Managing Project Dependencies
+
+Checking for Outdated Packages
+
+Run:
+```bash
+npm outdated
+```
+
+### Safe Updates
+
+For non-breaking updates:
+```bash
+npm update
+```
+
+For major version updates:
+```bash
+npm install package-name@latest
+```
+
+Test the application after each upgrade batch.
