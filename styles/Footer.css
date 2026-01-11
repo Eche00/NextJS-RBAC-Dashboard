@@ -28,7 +28,6 @@
   color: var(--zinc-100);
 }
 
-/* Mobile: 2 in a row */
 @media (max-width: 768px) {
   .footer-links {
     justify-content: space-between;

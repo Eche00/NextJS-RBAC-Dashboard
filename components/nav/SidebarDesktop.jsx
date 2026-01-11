@@ -11,7 +11,6 @@ import {
   faUserAstronaut,
   faShieldAlt,
   faRightFromBracket,
-  faArrowRightArrowLeft
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -19,27 +18,23 @@ export default function SidebarDesktop() {
   const { user, logout } = useAuth();
   const pathname = usePathname();
 
-  const slugify = (str) =>
-    str
-      ?.toLowerCase()
-      .trim()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]/g, "");
-
   const navLinks = [
     { href: "/dashboard", label: "Dashboard", icon: faLandmark },
     { href: "/games", label: "Games", icon: faGamepad },
     { href: "/courses", label: "Courses", icon: faBook },
     { href: "/jobs", label: "Jobs", icon: faBriefcase },
-    { href: "/transfer", label: "Transfer", icon: faArrowRightArrowLeft },
     {
-      href: `/profile/${slugify(user.fullName)}`,
+      href: `/profile`,
       label: "Profile",
       icon: faUserAstronaut
     },
   ];
 
   // 🔹 Updated admin check using custom claims
+  if (user?.admin || user?.moderator) {
+    navLinks.push({ href: "/mod", label: "Moderator Dashboard", icon: faShieldAlt });
+  }
+
   if (user?.admin) {
     navLinks.push({ href: "/access", label: "Admin Dashboard", icon: faShieldAlt });
   }

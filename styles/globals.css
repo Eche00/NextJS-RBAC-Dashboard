@@ -48,7 +48,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Hide scrollbar for all modern browsers */
 html,
 body {
   overflow: auto;
@@ -57,7 +56,6 @@ body {
   height: 100%;
 }
 
-/* Chrome, Edge, Safari */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
@@ -98,7 +96,7 @@ a {
 
 
 
-/* * updated for HeadUser.jsx*/
+/* * updated for HeadUser.jsx */
 .head-user {
   display: flex;
   justify-content: flex-end;

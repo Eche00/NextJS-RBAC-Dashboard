@@ -41,4 +41,4 @@ async function makeModerator(uid) {
 }
 
 // Replace with the real UID of the user you want to make moderator
-makeModerator("PASTE_USER_UID_HERE");
+makeModerator("123ModeratorUID67890");

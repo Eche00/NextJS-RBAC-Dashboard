@@ -10,7 +10,6 @@ import {
   faUserAstronaut,
   faShieldAlt,
   faRightFromBracket,
-  faArrowRightArrowLeft
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAuth } from "@/context/AuthContext";
@@ -19,21 +18,13 @@ export default function SidebarMobile({ open = false, onClose = () => { } }) {
   const { user, logout } = useAuth();
   const pathname = usePathname();
 
-  const slugify = (str) =>
-    str
-      ?.toLowerCase()
-      .trim()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]/g, "");
-
   const links = [
     { href: "/dashboard", label: "Dashboard", icon: faLandmark },
     { href: "/games", label: "Games", icon: faGamepad },
     { href: "/courses", label: "Courses", icon: faBook },
     { href: "/jobs", label: "Jobs", icon: faBriefcase },
-    { href: "/transfer", label: "Transfer", icon: faArrowRightArrowLeft },
     {
-      href: `/profile/${slugify(user.fullName)}`,
+      href: `/profile`,
       label: "Profile",
       icon: faUserAstronaut
     },
