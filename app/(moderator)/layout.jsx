@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import HeaderUser from "@/components/nav/HeaderUser";
-import SidebarAdmin from "@/components/nav/SidebarAdmin"; // reuse or create SidebarModerator if needed
+import SidebarMod from "@/components/nav/SidebarMod";
 import Loader from "@/components/user/loading";
 
 export default function ModeratorLayout({ children }) {
@@ -21,8 +21,8 @@ export default function ModeratorLayout({ children }) {
         return;
       }
 
-      // Logged in but not moderator → send to dashboard
-      if (!user.moderator) {
+      // Logged in but not moderator or admin → send to dashboard
+      if (!user.moderator && !user.admin) {
         router.push("/dashboard");
       }
     }
@@ -31,13 +31,13 @@ export default function ModeratorLayout({ children }) {
   if (loading) return <Loader />;
 
   // Prevent flashing UI before redirect
-  if (!user || !user.moderator) return null;
+  if (!user || (!user.moderator && !user.admin)) return null;
 
   return (
     <div className="moderator-app-root">
       <HeaderUser onOpenSidebar={() => setSidebarOpen(true)} />
 
-      <SidebarAdmin open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <SidebarMod open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {sidebarOpen && (
         <div

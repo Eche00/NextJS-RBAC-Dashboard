@@ -11,6 +11,7 @@ import {
   faUserAstronaut,
   faShieldAlt,
   faRightFromBracket,
+  faShieldBlank,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -30,9 +31,9 @@ export default function SidebarDesktop() {
     },
   ];
 
-  // 🔹 Updated admin check using custom claims
+  // Updated admin check using custom claims
   if (user?.admin || user?.moderator) {
-    navLinks.push({ href: "/mod", label: "Moderator Dashboard", icon: faShieldAlt });
+    navLinks.push({ href: "/mod", label: "Moderator Dashboard", icon: faShieldBlank });
   }
 
   if (user?.admin) {

@@ -10,6 +10,7 @@ import {
   faUserAstronaut,
   faShieldAlt,
   faRightFromBracket,
+  faShieldBlank,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAuth } from "@/context/AuthContext";
@@ -30,7 +31,11 @@ export default function SidebarMobile({ open = false, onClose = () => { } }) {
     },
   ];
 
-  // 🔹 Updated admin check using custom claims
+  // Updated admin check using custom claims
+  if (user?.admin || user?.moderator) {
+    links.push({ href: "/mod", label: "Moderator Dashboard", icon: faShieldBlank });
+  }
+
   if (user?.admin) {
     links.push({ href: "/access", label: "Admin Dashboard", icon: faShieldAlt });
   }
