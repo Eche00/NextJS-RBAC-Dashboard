@@ -25,7 +25,7 @@ export function AuthProvider({ children }) {
 
       try {
         // --------------------------------------------------
-        // 1️⃣ Initial fetch of user data (prevents ad-blocker issues)
+        // Initial fetch of user data (prevents ad-blocker issues)
         // --------------------------------------------------
         const snap = await getDoc(userRef);
         if (!snap.exists()) {
@@ -37,13 +37,13 @@ export function AuthProvider({ children }) {
         const firestoreUser = snap.data();
 
         // --------------------------------------------------
-        // 1️⃣a Fetch custom claims (admin/moderator)
+        //  Fetch custom claims (admin/moderator)
         // --------------------------------------------------
         const tokenResult = await firebaseUser.getIdTokenResult(true); // force refresh to get latest claims
         const claims = tokenResult.claims || {};
 
         // --------------------------------------------------
-        // 2️⃣ Auto-logout if lastLogin is more than 24h ago
+        //  Auto-logout if lastLogin is more than 24h ago
         // --------------------------------------------------
         if (firestoreUser.lastLogin) {
           const lastLogin = firestoreUser.lastLogin.toDate
@@ -61,7 +61,7 @@ export function AuthProvider({ children }) {
         }
 
         // --------------------------------------------------
-        // 3️⃣ Compute balance from transactions array
+        //  Compute balance from transactions array
         // --------------------------------------------------
         let balance = 0;
         if (Array.isArray(firestoreUser.transactions)) {
@@ -78,7 +78,7 @@ export function AuthProvider({ children }) {
           ...firestoreUser,
           balance,
           // --------------------------------------------------
-          // 1️⃣b Merge custom claims for role checks
+          //  Merge custom claims for role checks
           // --------------------------------------------------
           admin: !!claims.admin,
           moderator: !!claims.moderator,
@@ -88,7 +88,7 @@ export function AuthProvider({ children }) {
         setLoading(false);
 
         // --------------------------------------------------
-        // 4️⃣ Real-time updates for user document
+        //  Real-time updates for user document
         // --------------------------------------------------
         const unsubSnapshot = onSnapshot(userRef, async (liveSnap) => {
           if (!liveSnap.exists()) return;

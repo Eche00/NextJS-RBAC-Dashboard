@@ -17,8 +17,8 @@
 /.next/
 /out/
 scripts/*.json
-scripts/*.js
-scripts/*
+# scripts/*.js
+# scripts/*
 
 
 
