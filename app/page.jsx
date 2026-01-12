@@ -1,72 +1,104 @@
 "use client";
 
-import { useAuth } from "../context/AuthContext";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import Loader from "@/components/user/loading";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase, faUsers, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
+import "./Home.css";
 
-export default function Home() {
-  const { user, loading } = useAuth();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!loading && user) router.push("/dashboard");
-  }, [user, loading, router]);
-
-  if (loading) return <Loader />;
-  if (user) return null;
-
-  const cards = [
-    { icon: faBriefcase, title: "Find Jobs Easily", desc: "Search and apply for jobs across Africa with just a few clicks.", color: "#8b5cf6" },
-    { icon: faUsers, title: "Build Your Network", desc: "Connect with professionals, mentors, and industry leaders.", color: "#f97316" },
-    { icon: faGraduationCap, title: "Upskill & Learn", desc: "Discover courses and resources to boost your career growth.", color: "#10b981" },
-  ];
-
+export default function HomePage() {
   return (
-    <div style={{ padding: "50px", textAlign: "center" }}>
-      <h1 style={{ fontSize: "2.5rem", marginBottom: "20px" }}>Welcome to Local Africa LinkedIn 🌍</h1>
-      <p style={{ marginBottom: "50px", fontSize: "1.2rem", color: "#555" }}>
-        Discover jobs, courses, and connect with professionals across Africa.
-      </p>
+    <div className="home-root">
+      {/* Hero */}
+      <section className="home-hero">
+        <h1 className="home-title">RBAC Dashboard Boilerplate</h1>
+        <p className="home-subtitle">
+          A production-ready role-based access control dashboard built with
+          Next.js and Firebase.
+        </p>
 
-      <div style={{ display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap" }}>
-        {cards.map((card, idx) => (
-          <div
-            key={idx}
-            style={{
-              flex: "1 1 250px",
-              padding: "30px 20px",
-              borderRadius: "16px",
-              boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-              background: "#111827",
-              color: "#fff",
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-            }}
-            className="home-card"
-          >
-            <FontAwesomeIcon
-              icon={card.icon}
-              style={{
-                fontSize: "36px",
-                marginBottom: "20px",
-                color: card.color,
-              }}
-            />
-            <h3 style={{ fontSize: "1.4rem", marginBottom: "12px" }}>{card.title}</h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.4" }}>{card.desc}</p>
+        <Link href="/login" className="home-cta">
+          Get Started
+        </Link>
+      </section>
+
+      {/* What it does */}
+      <section className="home-section">
+        <h2 className="section-title">What This Dashboard Does</h2>
+
+        <div className="features-grid">
+          <div className="feature-card">
+            <h3>Role-Based Access Control</h3>
+            <p>
+              Control access using Firebase custom claims such as{" "}
+              <strong>admin</strong>, <strong>moderator</strong>, and{" "}
+              <strong>user</strong>.
+            </p>
           </div>
-        ))}
-      </div>
 
-      <style jsx>{`
-        .home-card:hover {
-          transform: translateY(-6px) scale(1.02);
-          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-        }
-      `}</style>
+          <div className="feature-card">
+            <h3>Protected Routes</h3>
+            <p>
+              Routes are guarded at the layout level using the Next.js App
+              Router. Users only see what they’re allowed to see.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <h3>Scalable Architecture</h3>
+            <p>
+              Uses route groups like <code>(admin)</code> and <code>(mod)</code>{" "}
+              for clean separation of concerns.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <h3>Firebase Powered</h3>
+            <p>
+              Authentication, Firestore, and role management powered entirely
+              by Firebase.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How to use */}
+      <section className="home-section alt">
+        <h2 className="section-title">How to Use</h2>
+
+        <div className="steps-grid">
+          <div className="step-card">
+            <span className="step-number">1</span>
+            <h3>Login</h3>
+            <p>
+              Sign in using Firebase Authentication. New users default to a
+              standard user role.
+            </p>
+          </div>
+
+          <div className="step-card">
+            <span className="step-number">2</span>
+            <h3>Assign Roles</h3>
+            <p>
+              Use the scripts in <code>/scripts</code> (e.g.{" "}
+              <code>makeadmin.js</code>) to assign roles locally.
+            </p>
+          </div>
+
+          <div className="step-card">
+            <span className="step-number">3</span>
+            <h3>Access Dashboards</h3>
+            <p>
+              Admins and moderators automatically see their dashboards based
+              on Firebase custom claims.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="home-footer">
+        <p>
+          Built for developers who want a clean, scalable RBAC foundation.
+        </p>
+      </footer>
     </div>
   );
 }
