@@ -20,6 +20,7 @@ This is a **starter dashboard framework** that provides:
 
 It is **not** a finished product.  
 It is meant to be extended for real applications.
+Do well to fork and leave a star to support the development process.
 
 ---
 
