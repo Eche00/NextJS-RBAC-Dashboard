@@ -1,0 +1,44 @@
+.role-loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background: #0b0f1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.role-loader-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 32px 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.role-loader-spinner {
+  width: 42px;
+  height: 42px;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #4f8cff;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+.role-loader-text {
+  font-size: 15px;
+  color: #e6e6eb;
+  letter-spacing: 0.3px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

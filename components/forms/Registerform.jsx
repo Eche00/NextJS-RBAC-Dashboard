@@ -1,78 +1,112 @@
 "use client";
+
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Loader from "../user/loading";
+import "@/styles/Auth.css";
+import Link from "next/link";
 
 export default function RegisterForm() {
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [registering, setRegistering] = useState(false);
+  const [error, setError] = useState("");
   const router = useRouter();
 
   const handleRegister = async () => {
+    setError("");
+
+    if (!fullName || !email || !password) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
     try {
       setRegistering(true);
 
-      // ✅ Create user in Firebase Authentication
+      // Create user in Firebase Authentication
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // ✅ Create Firestore record in "geeks" collection
+      // Create Firestore record
       await setDoc(doc(db, "geeks", user.uid), {
-        email: user.email,
-        fullName: email, // placeholder, replace with actual name input if needed
+        fullName,
+        email,
         transactions: [],
         createdAt: new Date(),
       });
 
-      // ✅ Send emails (non-blocking)
-      await Promise.all([
-        fetch("/api/email/welcome", {
-          method: "POST",
-          body: JSON.stringify({ email, name: email }),
-        }),
-        fetch("/api/email/notify-admin", {
-          method: "POST",
-          body: JSON.stringify({ email }),
-        }),
-      ]);
-
-      // ✅ Force refresh only after successful registration
-      window.location.href = "/dashboard";
+      // Redirect to dashboard
+      router.replace("/dashboard");
     } catch (err) {
-      alert(err.message);
+      setError(err.message || "Failed to register.");
       setRegistering(false);
     }
   };
 
-  // ✅ Show full loader when registering
-  if (registering) {
-    return <Loader />;
-  }
+  if (registering) return <Loader />;
 
   return (
-    <div>
-      <h1>Register</h1>
-      <input
-        value={email}
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        value={password}
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button
-        onClick={handleRegister}
-        disabled={!email || !password || registering}
-      >
-        {registering ? "Registering..." : "Register"}
-      </button>
+    <div className="auth-wrapper">
+      <div className="auth-card">
+        <h1 className="auth-title">Create an account</h1>
+        <p className="auth-subtitle">Sign up to access your dashboard</p>
+
+        <div className="auth-form">
+          <div className="field">
+            <label>Full Name</label>
+            <input
+              type="text"
+              placeholder="John Doe"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="field">
+            <label>Email address</label>
+            <input
+              type="email"
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="field">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+
+          {error && <p className="auth-error">{error}</p>}
+
+          <button
+            className="auth-btn"
+            onClick={handleRegister}
+            disabled={registering || !fullName || !email || !password}
+          >
+            {registering ? "Registering..." : "Register"}
+          </button>
+        </div>
+
+        <div className="auth-footer">
+          <p>
+            Already have an account? <Link href="/login">Login</Link>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
