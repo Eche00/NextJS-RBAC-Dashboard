@@ -10,10 +10,8 @@ It is intended for developers, administrators, and auditors to understand how th
 1. [Overview](#overview)
 2. [Admin Routes](#admin-routes)
 3. [User Management](#user-management)
-6. [Pending Features](#pending-features)
 7. [Security Practices](#security-practices)
 8. [Data Handling and Migration](#data-handling-and-migration)
-9. [Best Practices for Admin Access](#best-practices-for-admin-access)
 
 ---
 
