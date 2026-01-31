@@ -55,7 +55,8 @@ export function AuthProvider({ children }) {
 
           if (hoursDiff > 24) {
             await signOut(auth);
-            router.push("/login");
+            setUser(null); // ✅ ensure user state is cleared
+            router.replace("/login"); // ✅ replace instead of push
             return;
           }
         }
@@ -133,8 +134,9 @@ export function AuthProvider({ children }) {
             const hoursDiffRT = (new Date() - lastLoginRT) / (1000 * 60 * 60);
 
             if (hoursDiffRT > 24) {
-              signOut(auth);
-              router.push("/login");
+              await signOut(auth);
+              setUser(null); // ✅ ensure user state is cleared
+              router.replace("/login"); // ✅ replace instead of push
             }
           }
         });
@@ -157,7 +159,8 @@ export function AuthProvider({ children }) {
   // --------------------------------------------------
   const logout = async () => {
     await signOut(auth);
-    router.push("/login");
+    setUser(null); // ✅ ensure user state is cleared
+    router.replace("/login"); // ✅ replace instead of push
   };
 
   return (
