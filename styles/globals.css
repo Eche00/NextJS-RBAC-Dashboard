@@ -139,6 +139,18 @@ a {
   font-size: 20px;
 }
 
+.header-logo-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: auto; 
+}
+
+.header-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
 
 .hamburger {
   background: none;
@@ -168,7 +180,7 @@ a {
 .main-main {
   min-height: calc(100vh - 60px);
   box-sizing: border-box;
-  margin-top: 70px;
+  margin-top: 90px;
 }
 
 

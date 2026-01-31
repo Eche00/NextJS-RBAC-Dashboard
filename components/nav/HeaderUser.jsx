@@ -7,6 +7,14 @@ export default function HeaderUser({ onOpenSidebar }) {
 
   return (
     <header className="head-user">
+      <div className="header-logo-wrapper">
+        <img
+          src="/logo.png"
+          alt="Logo"
+          className="header-logo"
+        />
+      </div>
+
       <NavDash />
 
       {/* Hamburger visible only on mobile */}
