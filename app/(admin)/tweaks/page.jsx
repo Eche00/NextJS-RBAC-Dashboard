@@ -4,7 +4,6 @@ import { useState } from "react";
 import "@/styles/EditCourse.css";
 import ExtractData from "@/components/ExtractData";
 import MoveUsersAccordion from "@/components/Migration";
-import ZohoImportUI from "@/components/user/ZohoImport";
 import JsonToCsv from "@/components/user/Json2CSV";
 
 export default function AdminTweakPage() {

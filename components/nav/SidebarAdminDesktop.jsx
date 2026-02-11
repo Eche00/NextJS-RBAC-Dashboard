@@ -1,16 +1,14 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import {
     faLandmark,
     faPlusCircle,
-    faBookOpen,
-    faBriefcase,
-    faBell,
     faArrowLeft,
-    faRightFromBracket
+    faRightFromBracket,
+    faUsersGear
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -18,29 +16,34 @@ export default function SidebarAdminDesktop() {
     const { user, logout } = useAuth();
     const pathname = usePathname();
 
-    
     const navLinks = [
         { href: "/access", label: "Admin Overview", icon: faLandmark },
-        { href: "/add-transaction", label: "Add Transactions", icon: faPlusCircle },
-        { href: "/all-courses", label: "Courses", icon: faBookOpen },
-        { href: "/all-jobs", label: "Jobs", icon: faBriefcase },
-        { href: "/notification", label: "Notifications", icon: faBell },
+        { href: "/user", label: "All Users", icon: faUsersGear },
+        { href: "/tweaks", label: "Add & Tweak", icon: faPlusCircle },
         { href: "/dashboard", label: "Back to Dashboard", icon: faArrowLeft },
     ];
 
-
+    // Helper to check active links
+    const isLinkActive = (href) => pathname === href || pathname.startsWith(href + "/");
 
     return (
         <aside className="sidebar-desktop">
             {/* Logo */}
             <div className="sidebar-brand">
-                <img src="/logo.png" alt="MyApp Logo" className="sidebar-logo" />
-            </div>
+                     <Image
+                       src="/logo.png"
+                       alt="MyApp Logo"
+                       width={120}
+                       height={120}
+                       priority
+                       className="sidebar-logo"
+                     />
+                 </div>
 
             {/* Navigation links */}
             <nav className="sidebar-nav">
                 {navLinks.map(({ href, label, icon }) => {
-                    const isActive = pathname === href;
+                    const isActive = isLinkActive(href);
                     return (
                         <Link
                             key={href}

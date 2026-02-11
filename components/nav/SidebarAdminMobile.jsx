@@ -5,11 +5,9 @@ import { usePathname } from "next/navigation";
 import {
     faLandmark,
     faPlusCircle,
-    faBookOpen,
-    faBriefcase,
-    faBell,
     faArrowLeft,
-    faRightFromBracket
+    faRightFromBracket,
+    faUsersGear
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAuth } from "@/context/AuthContext";
@@ -18,26 +16,25 @@ export default function SidebarAdminMobile({ open = false, onClose = () => { } }
     const { user, logout } = useAuth();
     const pathname = usePathname();
 
-    
     const links = [
         { href: "/access", label: "Admin Overview", icon: faLandmark },
-        { href: "/add-transaction", label: "Add Transactions", icon: faPlusCircle },
-        { href: "/all-courses", label: "Courses", icon: faBookOpen },
-        { href: "/all-jobs", label: "Jobs", icon: faBriefcase },
-        { href: "/notification", label: "Notifications", icon: faBell },
+        { href: "/user", label: "All Users", icon: faUsersGear },
+        { href: "/tweaks", label: "Add & Tweak", icon: faPlusCircle },
         { href: "/dashboard", label: "Back to Dashboard", icon: faArrowLeft },
     ];
 
+    // Helper to check active links
+    const isLinkActive = (href) => pathname === href || pathname.startsWith(href + "/");
 
     return (
         <aside className={`sidebar-mobile ${open ? "open" : ""}`}>
-            <MiniDashboard />
+            <span className="sidebar-close" onClick={onClose}>✕</span>
 
-            <button className="sidebar-close" onClick={onClose}>✕</button>
+            <MiniDashboard />
 
             <nav className="sidebar-nav">
                 {links.map(({ href, label, icon }) => {
-                    const isActive = pathname === href;
+                    const isActive = isLinkActive(href);
 
                     return (
                         <Link
@@ -52,7 +49,6 @@ export default function SidebarAdminMobile({ open = false, onClose = () => { } }
                     );
                 })}
 
-                {/* Logout button */}
                 {user && (
                     <span
                         className="sidebar-item logout-btn"

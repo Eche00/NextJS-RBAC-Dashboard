@@ -1,0 +1,77 @@
+.extract-container {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+
+}
+
+.extract-card {
+    border-radius: 12px;
+    width: 100%;
+}
+
+.extract-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.extract-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 40px;
+}
+
+.extract-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(76, 82, 255, 0.1);
+    border: 1px solid rgba(76, 103, 255, 0.3);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.extract-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.extract-message {
+    color: #444;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.extract-resultBox {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.extract-pre {
+    font-size: 13px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.extract-copyButton {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
