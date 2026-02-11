@@ -1,0 +1,100 @@
+.cards {
+  background: rgba(30, 30, 40, 0.5);
+  border-top: 3px solid #8a2be2;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f4f4f4;
+  margin: 0 0 8px;
+  text-align: right;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: 8a2be2;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: #f4f4f4;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d1d5db;
+}
+
+.userText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.emailRole {
+  font-size: 13px;
+  color: #6b7280;
+  word-break: break-word;
+}
+
+
+.name {
+  font-weight: 600;
+  color: #111827;
+}
+
+
+.userBalance {
+  font-weight: 700;
+  color: #f4f4f4;
+  min-width: 80px;
+  text-align: right;
+}
+
+.loading {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.nameLink {
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nameLink:hover {
+  color: #374151;
+}

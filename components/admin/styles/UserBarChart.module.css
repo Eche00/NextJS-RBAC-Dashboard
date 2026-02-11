@@ -1,0 +1,21 @@
+.cards {
+    background: rgba(30, 30, 40, 0.5);
+    border-top: 3px solid #8a2be2;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #f4f4f4;
+}
+
+.chartWrapper {
+    width: 100%;
+    min-height: 300px;
+}

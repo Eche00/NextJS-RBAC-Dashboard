@@ -1,0 +1,301 @@
+.container {
+    margin: 2rem auto;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    color: #f4f4f4;
+    word-break: break-word;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+    color: #666;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4f46e5;
+}
+
+.headerInfo {
+    flex-grow: 1;
+}
+
+.headerInfo h2 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.8rem;
+}
+
+.headerInfo p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #dedede;
+}
+
+.badges {
+    margin-top: 0.5rem;
+}
+
+.verified {
+    padding: 0.25rem 0.6rem;
+    background-color: #22c55e;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.unverified {
+    padding: 0.25rem 0.6rem;
+    background-color: #ef4444;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.balance {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #dedede;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.actionBtn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background: rgba(76, 82, 255, 0.1);
+    border: 1px solid rgba(76, 103, 255, 0.3);
+    font-weight: 500;
+}
+
+.actionBtn:hover {
+    opacity: 0.9;
+}
+
+.saveBtn {
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    color: #4caf50;
+
+}
+
+.deleteBtn {
+    background: rgba(255, 76, 76, 0.1);
+    border: 1px solid rgba(255, 76, 76, 0.3);
+    color: #ff4c4c;
+}
+
+.input {
+    padding: 0.5rem 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    height: 40px;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.inputFocus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.select {
+    padding: 0.5rem 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    height: 40px;
+    width: 100%;
+    max-width: 150px;
+    transition: all 0.2s ease-in-out;
+}
+
+.selectFocus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.transactions {
+    margin-top: 2rem;
+}
+
+.transactionsTitle {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #f4f4f4;
+}
+
+.addTx {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.addTxInput {
+    flex: 1 1;
+    min-width: 60px;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    height: 40px;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.addTxSelect {
+    flex: 1 1 100px;
+    padding: 0.5rem 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 40px;
+}
+
+.addTxButton {
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #4f46e5;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.addTxButton:hover {
+    opacity: 0.9;
+}
+
+.txList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #2d2d2d;
+    padding: 0.5rem;
+    border-radius: 8px;
+    overflow-x: hidden;
+}
+
+.tx {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #333;
+    overflow-x: auto;
+}
+
+.txInput {
+    flex: 1 1 100%;
+    min-width: 60px;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    height: 40px;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.txSpan {
+    flex: 0 0 100px;
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.txDeleteBtn {
+    flex: 0 0 auto;
+    background-color: #ef4444;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.txDeleteBtn:hover {
+    opacity: 0.9;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #333;
+    padding: 8px 0;
+}
+
+.fieldLabel {
+    min-width: 120px;
+    font-weight: 600;
+    color: #dedede;
+}
+
+.fieldValue {
+    font-weight: 300;
+    color: #f4f4f4;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+
+    .balance {
+        margin-top: 1rem;
+    }
+
+    .tx,
+    .txList {
+        display: block;
+    }
+
+    .txInput {
+        min-width: 100%;
+        margin: 5px 0;
+    }
+
+    .txSpan,
+    .txDeleteBtn {
+        width: auto;
+    }
+
+    .addTx {
+        flex-direction: column;
+    }
+
+    .addTxInput,
+    .addTxSelect {
+        width: 100%;
+    }
+}

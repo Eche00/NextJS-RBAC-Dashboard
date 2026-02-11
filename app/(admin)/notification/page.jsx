@@ -1,9 +1,10 @@
 import React from 'react';
+import UpdateProfilePictures from '@/components/AutoDp';
 
 const Page = () => {
     return (
         <div>
-            nothing here for admin o
+            <UpdateProfilePictures />
         </div>
     );
 }
