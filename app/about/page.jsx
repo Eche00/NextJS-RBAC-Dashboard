@@ -1,5 +1,12 @@
 "use client";
 
+/*
+  This is about page to be handled by GoodBadBoy
+  It should be very detailed and include all information to serve its course
+  It should find a way to talk about and link to Collaboration, Beta Testing Audit,partnership and outsourcing
+  Focus on SEO, connect to roadmap, be very descriptive
+*/
+
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Code, Users, Zap, Globe, MessageSquare, Award as Trophy } from "react-feather";
