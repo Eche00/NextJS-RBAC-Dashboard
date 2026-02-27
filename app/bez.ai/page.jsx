@@ -23,6 +23,15 @@ const RULES = [
   "To get the most out of it, share honest answers, express your thoughts, and let the AI learn about you. The more it understands you, the better your course experience will be.",
 ]
 
+const slugify = (text) =>
+  text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")      // Replace spaces with -
+    .replace(/[^\w\-]+/g, "")  // Remove all non-word chars
+    .replace(/\-\-+/g, "-");   // Replace multiple - with single -
+
 const ChatCourse = () => {
   const router = useRouter()
   const { user: authUser, loading: authLoading } = useAuth()
@@ -221,7 +230,7 @@ const ChatCourse = () => {
                             </div>
                             <div
                               onClick={() =>
-                                router.push(`/course-name/${existingCourse?.id || ""}`)
+                                router.push(`/courses`)
                               }
                               className="tab"
                             >
@@ -250,7 +259,9 @@ const ChatCourse = () => {
                           <p>You must wait 7 days before creating another course.</p>
                           <button
                             onClick={() =>
-                              router.push(`/course-name/${existingCourse.id}`)
+                              router.push(
+                                `/courses/${slugify(existingCourse.courseTitle)}/${existingCourse.id}`
+                              )
                             }
                             className="continue-link card-shock center-btn"
                           >
@@ -270,7 +281,7 @@ const ChatCourse = () => {
                           </p>
                           <button
                             onClick={() =>
-                              router.push(`/course-name/${existingCourse?.id || ""}`)
+                              router.push(`/courses`)
                             }
                             className="card-shock center-btns"
                           >
