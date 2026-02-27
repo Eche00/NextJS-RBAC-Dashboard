@@ -1,0 +1,147 @@
+.user-carousel-container {
+  width: 100%;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+.user-card {
+  padding: 0 10px;
+  outline: none;
+}
+
+.card-content {
+  background: #1E1E20;
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  min-width: 0;
+}
+
+.user-card:hover .card-content {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.user-info-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.avatar-wrapper {
+  width: 50px;
+  height: 50px;
+  /* min-width: 100; */
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #111;
+  flex-shrink: 0;
+}
+
+.user-avatars {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-names-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.user-names {
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, var(--purple), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.user-handle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin: 0;
+}
+
+.user-role {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  background: linear-gradient(to right, #dedede, var(--zinc-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* border-radius: 20px; */
+  display: inline-block;
+  margin-top: 0.5rem;
+  align-self: flex-end;
+}
+
+@media (max-width: 950px) {
+  .user-card {
+    padding: 0 8px;
+  }
+
+  .card-content {
+    padding: 1.25rem;
+  }
+
+  .avatar-wrapper {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 780px) {
+  .user-card {
+    padding: 0 5px;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .user-names {
+    font-size: 1rem;
+  }
+
+  .user-handle {
+    font-size: 0.75rem;
+  }
+
+  .avatar-wrapper {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+  }
+}
+
+
+/* Slick overrides */
+.slick-track { display: flex !important; }
+.slick-slide { display: flex !important; justify-content: center; }
+.slick-slide > div { width: 100% !important; }
+.slick-list { overflow: hidden; }

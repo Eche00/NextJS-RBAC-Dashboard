@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import "./Home.css";
+import "./Homepage.css";
 
 export default function HomePage() {
   return (
@@ -13,7 +13,14 @@ export default function HomePage() {
           A production-ready role-based access control dashboard built with
           Next.js and Firebase.
         </p>
-
+        <p className="home-subtitle">
+          This is just an entry page, you can replace it with the content of{" "}
+          <Link href="/home" className="entry-link">
+            /home
+          </Link>.
+          <br />
+          Remember to delete one of them before deploying.
+        </p>
         <Link href="/login" className="home-cta">
           Get Started
         </Link>

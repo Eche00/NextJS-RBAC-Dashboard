@@ -1,0 +1,337 @@
+/* Web3 Keyframe Animations */
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(147, 51, 234, 0.4), 0 0 40px rgba(147, 51, 234, 0.2), 0 0 60px rgba(147, 51, 234, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(147, 51, 234, 0.7), 0 0 60px rgba(147, 51, 234, 0.4), 0 0 90px rgba(147, 51, 234, 0.2);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+    }
+
+    33% {
+        transform: translateY(-15px) rotate(3deg) scale(1.02);
+    }
+
+    66% {
+        transform: translateY(-8px) rotate(-2deg) scale(0.98);
+    }
+}
+
+@keyframes pulse-border {
+
+    0%,
+    100% {
+        border-color: rgba(147, 51, 234, 0.4);
+        box-shadow: 0 0 15px rgba(147, 51, 234, 0.3), inset 0 0 15px rgba(147, 51, 234, 0.1);
+    }
+
+    50% {
+        border-color: rgba(147, 51, 234, 0.9);
+        box-shadow: 0 0 30px rgba(147, 51, 234, 0.6), inset 0 0 30px rgba(147, 51, 234, 0.2);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100px) translateY(20px);
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    to {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) translateX(0px) rotate(0deg) scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(90vh) translateX(10px) rotate(45deg) scale(1);
+    }
+
+    90% {
+        opacity: 0.8;
+        transform: translateY(-10vh) translateX(90px) rotate(315deg) scale(0.8);
+    }
+
+    100% {
+        transform: translateY(-20vh) translateX(100px) rotate(360deg) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
+    }
+
+    25% {
+        background-position: 100% 50%;
+        filter: hue-rotate(90deg);
+    }
+
+    50% {
+        background-position: 100% 100%;
+        filter: hue-rotate(180deg);
+    }
+
+    75% {
+        background-position: 0% 100%;
+        filter: hue-rotate(270deg);
+    }
+
+    100% {
+        background-position: 0% 50%;
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes morph {
+
+    0%,
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: rotate(90deg) scale(1.1);
+    }
+
+    50% {
+        border-radius: 70% 30% 40% 60% / 40% 70% 60% 30%;
+        transform: rotate(180deg) scale(0.9);
+    }
+
+    75% {
+        border-radius: 40% 70% 60% 30% / 70% 40% 30% 60%;
+        transform: rotate(270deg) scale(1.05);
+    }
+}
+
+@keyframes neon-pulse {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px rgba(147, 51, 234, 0.6), 0 0 10px rgba(147, 51, 234, 0.4), 0 0 15px rgba(147, 51, 234, 0.3), 0 0 20px rgba(147, 51, 234, 0.2);
+    }
+
+    50% {
+        text-shadow: 0 0 10px rgba(147, 51, 234, 0.9), 0 0 20px rgba(147, 51, 234, 0.7), 0 0 30px rgba(147, 51, 234, 0.5), 0 0 40px rgba(147, 51, 234, 0.3);
+    }
+}
+
+@keyframes hologram-flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    2% {
+        opacity: 0.8;
+    }
+
+    4% {
+        opacity: 1;
+    }
+
+    8% {
+        opacity: 0.9;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.7;
+    }
+
+    14% {
+        opacity: 1;
+    }
+}
+
+@keyframes data-stream {
+    0% {
+        transform: translateY(100%) scaleY(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0%) scaleY(1);
+    }
+
+    100% {
+        transform: translateY(-100%) scaleY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes circuit-pulse {
+
+    0%,
+    100% {
+        background-position: 0% 0%;
+        opacity: 0.3;
+    }
+
+    50% {
+        background-position: 100% 100%;
+        opacity: 0.8;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+/* Background Effects */
+.gradient-bgs {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg,
+            rgba(147, 51, 234, 0.15),
+            rgba(59, 130, 246, 0.12),
+            rgba(147, 51, 234, 0.08),
+            rgba(168, 85, 247, 0.15),
+            rgba(79, 70, 229, 0.1),
+            rgba(147, 51, 234, 0.12));
+    background-size: 600% 600%;
+    animation: gradient-shift 20s ease infinite;
+}
+
+.grid-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.3;
+    background-image: linear-gradient(rgba(147, 51, 234, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(147, 51, 234, 0.15) 1px, transparent 1px),
+        radial-gradient(circle at 25px 25px, rgba(147, 51, 234, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 50px 50px;
+    animation: circuit-pulse 15s ease infinite;
+}
+
+/* Particle System */
+.particle-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(147, 51, 234, 0.4);
+    border-radius: 50%;
+    animation: particle-float linear infinite;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.6), 0 0 20px rgba(147, 51, 234, 0.3);
+}
+
+/* Floating Shapes */
+.floating-shapes {
+    position: absolute;
+    inset: 0;
+    /* z-index: 2; */
+}
+
+.shape {
+    position: absolute;
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape-1 {
+    top: 80px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    transform: rotate(45deg);
+    animation: float 8s ease-in-out infinite, morph 12s ease-in-out infinite;
+}
+
+.shape-2 {
+    top: 20px;
+    right: 120px;
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    border-radius: 50%;
+    animation: pulse-border 3s ease-in-out infinite;
+}
+
+.shape-3 {
+    bottom: 160px;
+    left: 80px;
+    width: 48px;
+    height: 48px;
+    background: rgba(147, 51, 234, 0.2);
+    transform: rotate(12deg);
+    animation: float 8s ease-in-out infinite, morph 12s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.shape-4 {
+    top: 240px;
+    left: 160px;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(45deg, rgba(147, 51, 234, 0.3), rgba(168, 85, 247, 0.3));
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.shape-5 {
+    bottom: 200px;
+    right: 40px;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(45deg, #030b19, rgba(168, 85, 247, 0.3));
+    border: 2px solid rgba(147, 51, 234, 0.2);
+    transform: rotate(45deg);
+    animation: pulse-border 3s ease-in-out infinite, morph 12s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+
+
+/* Challenge Section */
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
