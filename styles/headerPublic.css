@@ -37,6 +37,7 @@
     transition: color 0.2s;
 }
 
+
 .public-link.active {
     background: linear-gradient(to right, var(--purple), var(--cyan));
     -webkit-background-clip: text;

@@ -1,0 +1,156 @@
+.course-container {
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #dedede;
+}
+
+.course-content-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: #111;
+}
+
+.button-flex {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 2rem;
+    margin: 25px 0;
+}
+
+.tab {
+    padding: 0.5rem 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #2d2d2d;
+    color: #dedede;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+    flex: 0 0 auto;
+}
+
+.tab:hover {
+    background: #3a3a3a;
+}
+
+.rules-section {
+    padding: 2rem;
+    flex: 1 1 40%;
+    min-width: 300px;
+
+}
+
+.rules-section h2 {
+    text-align: left;
+}
+
+.rules-section h3 {
+    margin-top: 1rem;
+}
+
+.rules-section ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    list-style: disc;
+}
+
+.rules-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.action-area {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.start-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #005fa3;
+}
+
+.checking-text {
+    color: #dedede;
+    font-style: italic;
+}
+
+.notice-box {
+    background-color: #fffaf0;
+    border: 2px solid #ffa07a;
+    border-radius: 8px;
+    color: #8b0000;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.continue-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.course-ready,
+.course-ready-only {
+    margin-top: 3rem;
+    background-color: #f0f8ff;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    color: #003366;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 2rem;
+    text-align: center;
+}
+
+.fail-text {
+    color: #a00;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+
+.side-image {
+    max-width: 350px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.side-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile view: hide image */
+@media (max-width: 1100px) {
+    .side-image {
+        display: none;
+    }
+
+    .rules-section h2 {
+        font-size: 24px;
+    }
+
+    .rules-section {
+    padding: 1rem;
+}
+}
