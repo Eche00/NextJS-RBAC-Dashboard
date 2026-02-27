@@ -1,5 +1,12 @@
 "use client"
 
+/*
+  This is Bez AI page to be handled by Eche
+  Be very creative, do not mess up the logic, understand it first but be free to make the interface look better
+  please maintain the logic, maintain the switch sentences for each type of state
+  You are only free to come up with new designs
+*/
+
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { doc, getDoc, collection, getDocs, query, where } from "firebase/firestore"

@@ -1,0 +1,370 @@
+.hundred-days-container {
+    min-height: 100vh;
+    color: #f5f5f5;
+    padding: 2rem 1rem;
+}
+
+.hero-section {
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    background: linear-gradient(to right, var(--purple), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-titles {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    word-break: break-word;
+    background: linear-gradient(to right, var(--purple), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #b0b0b0;
+    margin: 0 0 3rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: center;
+
+}
+
+.start-date {
+    display: inline-block;
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    border: 1px solid #2a2a2a;
+}
+
+.date-label {
+    color: #888;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 0.75rem;
+}
+
+.date-value {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.countdown {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.countdown-item {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 16px;
+    min-width: 140px;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.countdown-item:hover {
+    transform: translateY(-4px);
+    border-color: #404040;
+}
+
+.countdown-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+    font-size: 0.875rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-cta {
+    margin-top: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 3rem;
+    color: #fff;
+}
+
+.what-to-expect-section {
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #404040;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: #fff;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.key-goals-section {
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.goal-card {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-4px);
+    border-color: #404040;
+}
+
+.goal-icon {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.goal-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1rem;
+}
+
+.goal-description {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #fff;
+    padding: 1.25rem 3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+     .hero-titles {
+        font-size: 1.55rem;
+        text-align: left;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        text-align: left;
+    }
+
+    .countdown {
+        gap: 1rem;
+    }
+
+    .countdown-item {
+        min-width: 100px;
+        padding: 1.5rem;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-card {
+        padding: 1.5rem;
+    }
+}
+
+/* ================================
+   HOW TO GET STARTED
+================================ */
+
+.how-to-start-section {
+    margin-top: 90px;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0f0f0f, #141414);
+    border-radius: 18px;
+}
+
+.how-to-start-section .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+/* Grid */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
+}
+
+/* Card */
+.step-card {
+    background: #111;
+    border-radius: 16px;
+    padding: 30px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* Icon */
+.step-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.step-icon i {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, var(--purple), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Titles */
+.step-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* Description */
+.step-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #cfcfcf;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.step-description strong {
+    color: #ffffff;
+    text-align: left;
+}
+
+
+/* Hashtag highlight */
+.hashtag-text {
+    margin: 12px 0;
+    font-size: 0.95rem;
+    color: #9adfff;
+    word-break: break-word;
+    text-align: left;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+    .how-to-start-section {
+        padding: 45px 15px;
+    }
+
+    .step-card {
+        padding: 26px 22px;
+    }
+}
