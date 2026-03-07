@@ -12,6 +12,20 @@ import {
   FileText,
 } from "react-feather";
 import "../../styles/BetaTestingAudit.css";
+"use client";
+
+import React from "react";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import {
+  ArrowLeft,
+  Shield,
+  Search,
+  Terminal,
+  Activity,
+  FileText,
+} from "react-feather";
+import "../../styles/BetaTestingAudit.css";
 
 const Page = () => {
   const router = useRouter();

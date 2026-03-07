@@ -1,9 +1,4 @@
-"use client";
-
-import React from "react";
-import { motion } from "framer-motion";
-import { Code, Globe, Cpu } from "react-feather";
-import "../../styles/Outsourcing.css";
+import React from 'react';
 
 const Page = () => {
   const services = [

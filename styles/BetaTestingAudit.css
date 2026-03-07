@@ -100,7 +100,11 @@
 }
 
 .expertise-list li::before {
+<<<<<<< HEAD
   content: "\2192";
+=======
+  content: "→";
+>>>>>>> 479f6b756df9fdd6e9d66229440b5a5a65f63e21
   color: var(--cyan);
 }
 
