@@ -1,0 +1,792 @@
+/* GLOBAL / MAIN CONTAINER */
+
+.outsourse-container {
+    color: #e2e8f0;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* HERO SECTION */
+
+.outsourse-hero-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+
+/* Hero Layout */
+.outsourse-hero {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+
+    position: relative;
+}
+
+
+/* Hero Content */
+
+.outsourse-hero-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Hero Image */
+
+.outsource-hero-image {
+    flex: 1;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+/* Overlay Gradient */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+
+    background: radial-gradient(#8b5cf633 0%,
+            #18181b00 50% 100%);
+}
+
+
+/* GRID BACKGROUND */
+
+.outsourse-grid-bg {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(to right, #33a25a18 1px, transparent 1px),
+        linear-gradient(to bottom, #33a25a18 1px, transparent 1px);
+
+    background-size: 100px 100px;
+
+    mask-image: radial-gradient(ellipse 100% 70% at 50% 100%,
+            #000 70%,
+            transparent 200%);
+
+    border-bottom: 1px solid #33a25a18;
+}
+
+
+/* HERO TEXT */
+
+.outsourse-hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.025em;
+
+    text-align: start;
+
+    background: linear-gradient(to right, white, var(--zinc-500));
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.outsourse-hero-title span {
+    color: #8b5cf6;
+}
+
+
+/* Hero Subtitle */
+
+.outsourse-hero-subtitle {
+    margin-top: 16px;
+
+    max-width: 650px;
+
+    font-size: 25px;
+    color: #a1a1aa;
+
+    text-align: start;
+}
+
+
+/* HERO BUTTON */
+
+.outsourse-hero-button {
+    margin-top: 10px;
+
+    padding: 25px 70px;
+
+    font-size: 16px;
+    font-family: Orbitron, Audiowide, sans-serif;
+    color: #f5f5f5;
+
+    border-image: linear-gradient(135deg, #00f9ff, #ff00e6);
+    border-image-slice: 1;
+
+    background:
+        linear-gradient(#000a14e6, #000a14e6),
+        linear-gradient(135deg, #00f9ff33, #ff00e633);
+
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    box-shadow:
+        0 0 10px #00f9ff4d,
+        inset 0 0 10px #00f9ff33;
+
+    text-shadow:
+        0 0 4px #ff00ff,
+        0 0 2px #00ffe7;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button Hover */
+
+.outsourse-hero-button:hover {
+    transform: scale(0.95);
+
+    box-shadow:
+        0 0 4px #ff00ff,
+        0 0 10px #00ffe7;
+}
+
+
+/* SERVICES SECTION */
+
+.outsourse-services {
+    padding: 80px 20px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+/* Section Title */
+
+.outsourse-section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+
+/* Service Card */
+
+.outsourse-service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background: #0f172a;
+    border: 1px solid #1e293b;
+
+    padding: 28px;
+
+    border-radius: 12px;
+
+    width: 280px;
+    height: 150px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Icon Circle */
+
+.outsourse-service-card span {
+    width: 50px;
+    height: 50px;
+
+    border: 2px solid #1e293b;
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Card Hover */
+
+.outsourse-service-card:hover {
+    transform: translateY(-6px);
+    border-color: #8b5cf6;
+}
+
+
+/* AUTO SCROLL ANIMATION */
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.scroll-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.scroll-content {
+    display: flex;
+    gap: 20px;
+
+    width: max-content;
+
+    animation: scroll 50s linear infinite;
+}
+
+/* SERVICES OVERVIEW SECTION */
+
+.outsource-overview-container {
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 140px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 70px;
+
+    position: relative;
+}
+
+
+/* HEADER */
+
+.outsource-overview-header {
+    text-align: center;
+    max-width: 750px;
+}
+
+.outsource-overview-title {
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-size: 3rem;
+    font-weight: 700;
+
+    background: linear-gradient(90deg, #8b5cf6, #22c1c3);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+.outsource-overview-title span {
+    color: #22c1c3;
+}
+
+.outsource-overview-subtitle {
+
+    margin-top: 18px;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    color: #a1a1aa;
+}
+
+
+/* GRID */
+
+.outsource-overview-grid {
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+}
+
+
+/* CARD */
+
+.outsource-overview-card {
+
+    background: rgba(25, 25, 30, 0.55);
+
+    backdrop-filter: blur(14px);
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    padding: 35px;
+
+    transition: all .35s ease;
+
+    position: relative;
+}
+
+
+.outsource-overview-card:hover {
+
+    transform: translateY(-8px);
+
+    border: 1px solid rgba(139, 92, 246, .4);
+
+    box-shadow:
+        0 10px 40px rgba(139, 92, 246, .15);
+}
+
+
+/* ICON */
+
+.outsource-overview-icon {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+/* icon colors */
+
+.dev {
+    background: rgba(139, 92, 246, .2);
+    color: #a78bfa;
+}
+
+.team {
+    background: rgba(34, 197, 94, .15);
+    color: #4ade80;
+}
+
+.ai {
+    background: rgba(255, 87, 87, .18);
+    color: #fb7185;
+}
+
+
+/* TEXT */
+
+.outsource-overview-card h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+
+    color: #d4d4d8;
+}
+
+
+.outsource-overview-card p {
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #a1a1aa;
+}
+
+
+/* OUR SERVICES SECTION */
+
+.outsource-services-main {
+    background: #0f172a;
+    padding: 70px 0;
+}
+
+.outsource-services-container {
+    background: #0f172a;
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+/* HEADER */
+
+.outsource-services-header {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+
+.outsource-services-header p {
+
+    margin-top: 15px;
+
+    font-size: 18px;
+    color: #a1a1aa;
+
+    line-height: 1.6;
+}
+
+
+/* GRID */
+
+.outsource-services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+
+/* CARD */
+
+.outsource-service-card {
+
+    background: rgba(25, 25, 30, 0.55);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 12px;
+
+    padding: 30px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    text-align: center;
+
+    transition: all .3s ease;
+}
+
+.outsource-service-card:hover {
+
+    transform: translateY(-6px);
+
+    border: 1px solid rgba(139, 92, 246, .4);
+
+    box-shadow: 0 8px 30px rgba(139, 92, 246, .15);
+}
+
+
+/* ICON */
+
+.outsource-service-icon {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg,
+            rgba(139, 92, 246, .25),
+            rgba(34, 193, 195, .25));
+
+    color: #a78bfa;
+}
+
+
+/* TEXT */
+
+.outsource-service-card h3 {
+
+    font-size: 16px;
+    font-weight: 500;
+
+    color: #d4d4d8;
+}
+
+/*TEAM SECTION */
+.outsource-cta-container {
+    padding: 70px 0;
+
+}
+
+.outsource-team-header {
+    text-align: center;
+    margin: auto;
+}
+
+
+
+.outsource-team-header p {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 15px;
+
+    font-size: 18px;
+    color: #a1a1aa;
+
+    line-height: 1.6;
+}
+
+.outsource-team {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/*PROFILE CARD */
+
+.outsource-profile-card {
+
+    position: relative;
+
+    width: 300px;
+    height: 340px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+
+.outsource-profile-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 40px rgba(139, 92, 246, .25);
+}
+
+
+/*PROFILE IMAGE */
+
+.outsource-profile-image {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/*IMAGE DARK GRADIENT */
+
+.outsource-profile-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, .85) 0%,
+            rgba(0, 0, 0, .55) 40%,
+            rgba(0, 0, 0, 0) 70%);
+}
+
+
+/*PROFILE INFO */
+
+.outsource-profile-info {
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    color: white;
+}
+
+
+/* NAME */
+
+.outsource-profile-info h4 {
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* FOUNDER ROLE */
+
+.outsource-profile-role {
+
+    font-size: 14px;
+    color: #a78bfa;
+}
+
+
+/* TECH ROLE */
+
+.outsource-profile-tech {
+
+    font-size: 13px;
+    color: #cbd5f5;
+}
+
+
+/* RESPONSIVENESS */
+
+
+/* Tablets */
+
+@media (max-width: 1000px) {
+
+    .outsourse-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .outsourse-hero-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .outsourse-hero-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .outsourse-hero-subtitle {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .outsource-hero-image {
+        max-width: 100%;
+    }
+
+    .outsource-overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .outsource-team {
+        gap: 20px;
+    }
+
+    .outsource-profile-card {
+        max-width: 220px;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .outsourse-hero {
+        gap: 20px;
+    }
+
+    .outsourse-hero-title {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    .outsourse-hero-subtitle {
+        font-size: 18px;
+    }
+
+    .outsourse-hero-button {
+        padding: 18px 40px;
+        font-size: 14px;
+    }
+
+    .outsourse-services {
+        padding: 60px 20px;
+    }
+
+    .outsourse-service-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .outsource-overview-card {
+        padding: 15px;
+    }
+
+    .outsource-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .outsource-overview-title {
+        font-size: 2.2rem;
+    }
+
+
+}
+
+
+/* Small Phones */
+
+@media (max-width: 480px) {
+
+    .outsourse-hero-title {
+        font-size: 2rem;
+    }
+
+    .outsourse-hero-subtitle {
+        font-size: 16px;
+    }
+
+    .outsource-team {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .outsource-profile-card {
+
+        width: 90%;
+        max-width: 300px;
+    }
+}
